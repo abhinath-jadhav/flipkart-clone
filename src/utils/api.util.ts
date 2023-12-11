@@ -17,24 +17,24 @@ const getFeaturedProduct = (cat: string): FeaturedProduct[] => {
 const getBestDeals = (): string[][] => {
   const imgList = [
     [
-      "https://rukminim1.flixcart.com/fk-p-flap/520/280/image/b8baae376137c89e.jpg?q=20",
-      "https://rukminim1.flixcart.com/fk-p-flap/520/280/image/07b437dc74cb4f25.jpg?q=20",
-      "https://rukminim1.flixcart.com/fk-p-flap/520/280/image/001d5002a4adeeaf.jpg?q=20",
+      "https://rukminim1.flixcart.com/fk-p-flap/520/280/image/b8baae376137c89e.jpg",
+      "https://rukminim1.flixcart.com/fk-p-flap/520/280/image/07b437dc74cb4f25.jpg",
+      "https://rukminim1.flixcart.com/fk-p-flap/520/280/image/001d5002a4adeeaf.jpg",
     ],
     [
-      "https://rukminim1.flixcart.com/fk-p-flap/520/280/image/510a537440b39340.jpg?q=20",
-      "https://rukminim1.flixcart.com/fk-p-flap/520/280/image/c4099de7a5297e8c.jpg?q=20",
-      "https://rukminim1.flixcart.com/fk-p-flap/520/280/image/938d3168fe80f9b6.jpg?q=20",
+      "https://rukminim1.flixcart.com/fk-p-flap/520/280/image/510a537440b39340.jpg",
+      "https://rukminim1.flixcart.com/fk-p-flap/520/280/image/c4099de7a5297e8c.jpg",
+      "https://rukminim1.flixcart.com/fk-p-flap/520/280/image/938d3168fe80f9b6.jpg",
     ],
     [
-      "https://rukminim1.flixcart.com/fk-p-flap/520/280/image/8fe2200021bd4938.jpg?q=20",
-      "https://rukminim1.flixcart.com/fk-p-flap/520/280/image/e900d663d029165e.jpg?q=20",
-      "https://rukminim1.flixcart.com/fk-p-flap/520/280/image/838aae0f740696c8.jpg?q=20",
+      "https://rukminim1.flixcart.com/fk-p-flap/520/280/image/8fe2200021bd4938.jpg",
+      "https://rukminim1.flixcart.com/fk-p-flap/520/280/image/e900d663d029165e.jpg",
+      "https://rukminim1.flixcart.com/fk-p-flap/520/280/image/838aae0f740696c8.jpg",
     ],
     [
-      "https://rukminim1.flixcart.com/fk-p-flap/520/280/image/66a95f7b8a2de8d0.jpg?q=20",
-      "https://rukminim1.flixcart.com/fk-p-flap/520/280/image/5549c8378ebc39ec.jpg?q=20",
-      "https://rukminim1.flixcart.com/fk-p-flap/520/280/image/62f485577d8e3f7c.jpg?q=20",
+      "https://rukminim1.flixcart.com/fk-p-flap/520/280/image/66a95f7b8a2de8d0.jpg",
+      "https://rukminim1.flixcart.com/fk-p-flap/520/280/image/5549c8378ebc39ec.jpg",
+      "https://rukminim1.flixcart.com/fk-p-flap/520/280/image/62f485577d8e3f7c.jpg",
     ],
   ];
 

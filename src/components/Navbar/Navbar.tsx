@@ -6,9 +6,17 @@ import VerticalDots from "../../assets/verticalDots.svg";
 import Cart from "../../assets/header_cart.svg";
 import Search_icon from "../../assets/search.svg";
 import Container from "../Container/Container";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { KeyboardEvent } from "react";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
+  const handleSearch = (e: KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      navigate("/search-result");
+    }
+  };
   return (
     <div className="bg-white">
       <Container>
@@ -19,6 +27,7 @@ const Navbar = () => {
                 <img className="w-[120px]" src={Logo} alt="Flipkart" />
               </Link>
             </div>
+            {/* Search */}
             <div className="w-[70%] relative bg-slate-100 rounded-md p-2">
               <img
                 className="absolute h-6 w-6 top-2 left-1"
@@ -29,6 +38,7 @@ const Navbar = () => {
                 className="pl-8 w-full bg-transparent outline-none"
                 type="text"
                 placeholder="Search for Products, Brands and More"
+                onKeyDown={(event) => handleSearch(event)}
               />
             </div>
           </div>
