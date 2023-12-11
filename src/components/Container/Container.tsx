@@ -1,8 +1,18 @@
 import { ReactNode } from "react";
 
-const Container = ({ children }: { children: ReactNode }) => {
+const Container = ({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className?: string;
+}) => {
   return (
-    <div className="max-w-[1600px] flex justify-center mx-auto">{children}</div>
+    <div
+      className={`${className} max-w-[1600px] flex justify-center mx-auto z-20`}
+    >
+      {children}
+    </div>
   );
 };
 

@@ -2,14 +2,9 @@ import { Route, Routes } from "react-router-dom";
 
 import "./App.css";
 import Layout from "./Layout";
-import { Home, SearchResult } from "../pages";
-import { useSelector } from "react-redux";
-import { RootState } from "../store/store";
+import { Home, ProductDetail, SearchResult } from "../pages";
 
 function App() {
-  const checkHome = useSelector((state: RootState) => state.isHome);
-  console.log(checkHome);
-
   return (
     <div className="h-screen">
       <Routes>
@@ -17,6 +12,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/search-result" element={<SearchResult />} />
           <Route path="/test" element={<SearchResult />} />
+          <Route path="/product/:id" element={<ProductDetail />} />
         </Route>
       </Routes>
     </div>

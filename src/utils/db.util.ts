@@ -47,4 +47,18 @@ const bestMobile: FeaturedProduct[] = [
   },
 ];
 
-export { sliderImg, featuredCategories, bestMobile };
+const category = {
+  name: "Home",
+  subCategory: {
+    name: "Mobile & Accesories",
+    subCategory: {
+      name: "Mobile",
+      subCategory: {
+        name: "Realme Mobile",
+        subCategory: null,
+      },
+    },
+  },
+};
+
+export { sliderImg, featuredCategories, bestMobile, category };

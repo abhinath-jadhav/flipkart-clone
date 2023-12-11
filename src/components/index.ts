@@ -7,6 +7,7 @@ import Footer from "./Footer/Footer";
 import SearchHeader from "./SearchResult/SearchHeader";
 import SearchBody from "./SearchResult/SearchBody";
 import SideBar from "./SearchResult/SideBar";
+import SearechProductCard from "./Cards/SearechProductCard";
 
 export {
   Navbar,
@@ -18,4 +19,5 @@ export {
   SearchHeader,
   SideBar,
   SearchBody,
+  SearechProductCard,
 };
