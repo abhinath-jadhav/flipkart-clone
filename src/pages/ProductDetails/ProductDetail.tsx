@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+//import React, { useEffect, useState } from "react";
+//import { useParams } from "react-router-dom";
 import { Container, SearchHeader } from "../../components";
 
 const ProductDetail = () => {
-  const { id } = useParams();
+  //const { id } = useParams();
 
   const imgList: string[] = [
     "https://rukminim2.flixcart.com/image/832/832/xif0q/mobile/h/r/a/-original-imagrdvzn2mtjae8.jpeg?q=70",
