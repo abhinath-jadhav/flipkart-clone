@@ -30,7 +30,7 @@ const BestProduct = ({ cat }: { cat: string }) => {
             Best Mobile
           </h2>
 
-          <Link to={"/"} className="text-blue-700 cursor-pointer">
+          <Link to={"/search-result"} className="text-blue-700 cursor-pointer">
             <IoChevronForwardCircleSharp size={25} />
           </Link>
         </div>
