@@ -122,8 +122,8 @@ const ProductDetail = () => {
             <div>
               <p className="font-semibold my-2">Available offers</p>
 
-              {offers.map((offer) => (
-                <div>
+              {offers.map((offer, i) => (
+                <div key={i}>
                   <div className="flex justify-start items-center gap-2 text-sm mt-2">
                     <FaTag color="rgb(21 128 61)" />
                     <p> {offer}</p>
