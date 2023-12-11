@@ -70,6 +70,10 @@ const SearchBody = ({ className }: { className: string }) => {
       <SortByBar />
       <SearechProductCard product={product} />
       <SearechProductCard product={product} />
+      <SearechProductCard product={product} />
+      <SearechProductCard product={product} />
+      <SearechProductCard product={product} />
+      <SearechProductCard product={product} />
     </div>
   );
 };

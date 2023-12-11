@@ -8,6 +8,7 @@ import SearchHeader from "./SearchResult/SearchHeader";
 import SearchBody from "./SearchResult/SearchBody";
 import SideBar from "./SearchResult/SideBar";
 import SearechProductCard from "./Cards/SearechProductCard";
+import SelectionCard from "./Cards/SelectionCard";
 
 export {
   Navbar,
@@ -20,4 +21,5 @@ export {
   SideBar,
   SearchBody,
   SearechProductCard,
+  SelectionCard,
 };

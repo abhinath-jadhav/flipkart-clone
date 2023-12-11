@@ -15,3 +15,9 @@ export interface Product {
   offer: number;
   assured?: boolean;
 }
+
+export interface SelectionData {
+  detail: string;
+  isImgage: boolean;
+  img?: string;
+}

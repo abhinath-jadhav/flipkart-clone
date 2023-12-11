@@ -26,9 +26,12 @@ const BestProduct = ({ cat }: { cat: string }) => {
     <Container>
       <div className="w-full mt-5 bg-white dsa px-5 pb-6 md:pb-8">
         <div className="flex items-center justify-between">
-          <h2 className="text-lg md:text-2xl font-semibold py-4 md:py-6">
+          <Link
+            to={"/search-result"}
+            className="text-lg md:text-2xl font-semibold py-4 md:py-6"
+          >
             Best Mobile
-          </h2>
+          </Link>
 
           <Link to={"/search-result"} className="text-blue-700 cursor-pointer">
             <IoChevronForwardCircleSharp size={25} />
