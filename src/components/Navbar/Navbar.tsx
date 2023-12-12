@@ -7,7 +7,10 @@ import Cart from "../../assets/header_cart.svg";
 import Search_icon from "../../assets/search.svg";
 import Container from "../Container/Container";
 import { Link, useNavigate } from "react-router-dom";
-import { KeyboardEvent } from "react";
+import { KeyboardEvent, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../store/store";
+import { CartItem, addToCart } from "../../store/features/cartSlice";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -17,6 +20,22 @@ const Navbar = () => {
       navigate("/search-result");
     }
   };
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const items = localStorage.getItem("cart");
+    if (items) {
+      const parsed: CartItem[] = JSON.parse(items);
+      parsed.forEach((cart) => {
+        dispatch(addToCart(cart));
+      });
+      console.log(parsed);
+    }
+  }, [dispatch]);
+
+  const cartItems = useSelector((state: RootState) => state.cartSlice);
+
   return (
     <div className="bg-white">
       <Container>
@@ -103,7 +122,12 @@ const Navbar = () => {
               </div>
             </div>
             {/* Cart */}
-            <div className="flex gap-2">
+            <div className="flex gap-2 relative">
+              {cartItems.length !== 0 && (
+                <div className="absolute flex justify-center items-center text-xs top-[-0.3rem] left-2 bg-orange-600 text-white h-[16px] w-[16px] rounded-full">
+                  <p>{cartItems[0].quantity}</p>
+                </div>
+              )}
               <img src={Cart} alt="" />
               <h3>Cart</h3>
             </div>

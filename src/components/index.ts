@@ -11,6 +11,7 @@ import SearechProductCard from "./Cards/SearechProductCard";
 import SelectionCard from "./Cards/SelectionCard";
 import ListComponent from "./ProductDetails/ListComponent";
 import FetauresComponent from "./ProductDetails/FetauresComponent";
+import ImagesComponent from "./ProductDetails/ImagesComponent";
 
 export {
   Navbar,
@@ -26,4 +27,5 @@ export {
   SelectionCard,
   ListComponent,
   FetauresComponent,
+  ImagesComponent,
 };
