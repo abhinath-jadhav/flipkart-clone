@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.hidden-scroll::-webkit-scrollbar {
+  width: 0; /* Adjust as needed, this is the width of the invisible scrollbar track */
+}
+
+.hidden-scroll::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  z-index: -1;
+  /* Make the scrollbar thumb transparent */
+}
+
+.hidden-scroll {
+  scrollbar-width: thin;
+}
+
+.hidden-scroll::-moz-scrollbar-thumb {
+  background-color: transparent; /* Make the scrollbar thumb transparent */
+}

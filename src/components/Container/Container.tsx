@@ -3,13 +3,17 @@ import { ReactNode } from "react";
 const Container = ({
   children,
   className,
+  width,
 }: {
   children: ReactNode;
   className?: string;
+  width?: string;
 }) => {
   return (
     <div
-      className={`${className} max-w-[1600px] flex justify-center mx-auto z-20`}
+      className={`${className} flex justify-center mx-auto z-20 max-w-[${
+        width ? width : "1600px"
+      }]`}
     >
       {children}
     </div>

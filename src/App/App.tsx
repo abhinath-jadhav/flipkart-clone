@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 
 import "./App.css";
 import Layout from "./Layout";
-import { Home, ProductDetail, SearchResult } from "../pages";
+import { Cart, Home, ProductDetail, SearchResult } from "../pages";
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
           <Route path="/search-result" element={<SearchResult />} />
           <Route path="/test" element={<SearchResult />} />
           <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path="/cart" element={<Cart />} />
         </Route>
       </Routes>
     </div>

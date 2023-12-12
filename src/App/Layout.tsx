@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 const Layout = () => {
   return (
     <div className="">
-      <div className="sticky top-0 z-10 bg-white">
+      <div className="sticky top-0 z-50 bg-white">
         <Navbar />
       </div>
 

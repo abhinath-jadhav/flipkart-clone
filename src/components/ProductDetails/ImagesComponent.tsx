@@ -28,11 +28,11 @@ const ImagesComponent = ({ productId }: { productId: string }) => {
     <div className={`w-[40%] h-fit sticky top-16 p-4`}>
       <div className="h-[450px] flex border border-gray-300">
         {/* small image bar */}
-        <div className="h-full w-fit overflow-y-auto border-r border-gray-300">
+        <div className="hidden-scroll h-full w-[75px] overflow-y-auto border-r border-gray-300">
           {imgList.map((img, i) => (
             <div
               key={i}
-              className="flex justify-center items-center border-b border-gray-300 w-[63px] h-[63px]"
+              className=" flex justify-center items-center border-b border-gray-300 w-[63px] h-[63px]"
             >
               <button className="h-full" onClick={() => setHeroImg(img)}>
                 <img className="h-full p-1" src={img} alt="imag-1" />

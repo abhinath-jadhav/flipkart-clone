@@ -84,7 +84,7 @@ const Navbar = () => {
                 className="group-hover:rotate-180 duration-500"
               />
               {/* Drop Down Menu */}
-              <div className="group-hover:block hidden absolute top-full left-0 p-4 text-sm border rounded-md shadow-md">
+              <div className="group-hover:block hidden absolute top-full left-0 p-4 text-sm border rounded-md shadow-md bg-white">
                 <div className="flex flex-col gap-5">
                   <div className="flex w-auto gap-2 items-center">
                     <img className="h-[20px]" src={Profile} alt="" />
@@ -122,7 +122,7 @@ const Navbar = () => {
               </div>
             </div>
             {/* Cart */}
-            <div className="flex gap-2 relative">
+            <Link to={"/cart"} className="flex gap-2 relative">
               {cartItems.length !== 0 && (
                 <div className="absolute flex justify-center items-center text-xs top-[-0.3rem] left-2 bg-orange-600 text-white h-[16px] w-[16px] rounded-full">
                   <p>{cartItems[0].quantity}</p>
@@ -130,7 +130,7 @@ const Navbar = () => {
               )}
               <img src={Cart} alt="" />
               <h3>Cart</h3>
-            </div>
+            </Link>
             <div>
               <img src={VerticalDots} alt="" />
             </div>
