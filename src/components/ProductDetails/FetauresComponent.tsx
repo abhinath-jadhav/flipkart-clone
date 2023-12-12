@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 interface Specification {
   [key: string]: string | string[] | Specification;
@@ -44,15 +44,30 @@ const FetauresComponent = ({ data }: { data: object }) => {
       );
     }
   };
+  const [specsHeight, setSpecsHeight] = useState("h-[720px]");
+  const [showRead, setShowRead] = useState(true);
 
+  const changeHeight = () => {
+    setShowRead(false);
+    setSpecsHeight((prev) => (prev === "h-[720px]" ? "" : "h-[720px]"));
+  };
   return (
-    <div className="mt-8">
-      <p className="text-2xl font-semibold">Specifications</p>
-      <div className="text-sm mt-6">
-        {Object.entries(data).map(([key, value]) =>
-          renderSpecification(key, value)
-        )}
+    <div className="mt-8 ">
+      <div className={`${specsHeight} overflow-hidden`}>
+        <p className="text-2xl font-semibold">Specifications</p>
+        <div className="text-sm mt-6">
+          {Object.entries(data).map(([key, value]) =>
+            renderSpecification(key, value)
+          )}
+        </div>
       </div>
+      {showRead && (
+        <div className="border">
+          <button onClick={changeHeight} className="">
+            <p className="p-4 text-blue-600"> Read More </p>
+          </button>
+        </div>
+      )}
     </div>
   );
 };
