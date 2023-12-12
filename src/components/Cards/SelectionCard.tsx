@@ -3,13 +3,16 @@ import { SelectionData } from "../../utils/types.util";
 const SelectionCard = ({
   data,
   className,
+  title,
 }: {
   data: SelectionData[];
   className?: string;
+  title: string;
 }) => {
   const comment = "../../assets/comment.svg";
   return (
     <div className={`flex cursor-pointer gap-2 ${className}`}>
+      <p className="w-24">{title}</p>
       {data.map((obj, i) => (
         <div className="relative" key={i}>
           {obj.isImgage ? (

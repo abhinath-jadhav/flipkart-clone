@@ -1,11 +1,17 @@
 //import React, { useEffect, useState } from "react";
 //import { useParams } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
-import { Container, SearchHeader } from "../../components";
+import {
+  Container,
+  FetauresComponent,
+  ListComponent,
+  SearchHeader,
+} from "../../components";
 import { FaStar, FaTag } from "react-icons/fa";
 import { SelectionCard } from "../../components";
 import { SelectionData } from "../../utils/types.util";
 import { useState } from "react";
+import { specifications } from "../../utils/db.util";
 
 const ProductDetail = () => {
   //const { id } = useParams();
@@ -44,6 +50,18 @@ const ProductDetail = () => {
       isImgage: false,
     },
   ];
+  const ramOptions: SelectionData[] = [
+    {
+      detail: "8GB",
+      img: "",
+      isImgage: false,
+    },
+    {
+      detail: "16GB",
+      img: "",
+      isImgage: false,
+    },
+  ];
   const colorOptions: SelectionData[] = [
     {
       detail: "White",
@@ -55,6 +73,15 @@ const ProductDetail = () => {
       img: "https://rukminim2.flixcart.com/image/832/832/xif0q/mobile/u/m/b/-original-imagrdefbw6bhbjr.jpeg",
       isImgage: true,
     },
+  ];
+
+  const highlights: string[] = [
+    "12 GB RAM | 256 GB ROM",
+    "17.02 cm (6.7 inch) Full HD+ Display",
+    "50 MP(OIS) +50MP | 32MP Front Camera",
+    "4700 mAh Lithium ion Battery",
+    "Qualcomm Snapdragon 8+ Gen 1 Processor",
+    "LTPO AMOLED (1 Hz - 120 Hz)",
   ];
 
   return (
@@ -101,7 +128,7 @@ const ProductDetail = () => {
             </div>
           </div>
           {/* Main details */}
-          <div className="w-[60%] h-[1400px] p-4">
+          <div className="w-[60%] p-4">
             <h1>Nothing Phone (2) (White, 256 GB) (12 GB RAM)</h1>
             <div>
               <h3 className="flex items-center gap-3 text-xs text-[#808080] mt-1">
@@ -131,10 +158,37 @@ const ProductDetail = () => {
                 </div>
               ))}
             </div>
+            <div className="mt-8">
+              <p>
+                1 Year Manufacturing Warranty{" "}
+                <span className="font-semibold text-blue-700">Know More</span>
+              </p>
+            </div>
             {/* Selction buttons */}
-            <div className="mt-16">
-              <SelectionCard className="mt-2" data={colorOptions} />
-              <SelectionCard className={"mt-2"} data={selectionOption} />
+            <div className="mt-8">
+              <SelectionCard
+                title="Colors"
+                className="mt-2"
+                data={colorOptions}
+              />
+
+              <SelectionCard
+                title="Memory"
+                className={"mt-6"}
+                data={selectionOption}
+              />
+              <SelectionCard title="Ram" className={"mt-6"} data={ramOptions} />
+            </div>
+            <div>
+              <ListComponent
+                title="Highlights"
+                className="mt-6"
+                list={highlights}
+              />
+            </div>
+            {/* Features */}
+            <div>
+              <FetauresComponent data={specifications} />
             </div>
           </div>
         </div>

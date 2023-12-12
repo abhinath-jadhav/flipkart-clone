@@ -9,6 +9,8 @@ import SearchBody from "./SearchResult/SearchBody";
 import SideBar from "./SearchResult/SideBar";
 import SearechProductCard from "./Cards/SearechProductCard";
 import SelectionCard from "./Cards/SelectionCard";
+import ListComponent from "./ProductDetails/ListComponent";
+import FetauresComponent from "./ProductDetails/FetauresComponent";
 
 export {
   Navbar,
@@ -22,4 +24,6 @@ export {
   SearchBody,
   SearechProductCard,
   SelectionCard,
+  ListComponent,
+  FetauresComponent,
 };
