@@ -25,7 +25,7 @@ const ImagesComponent = ({ productId }: { productId: string }) => {
     dispatch(addToCart({ productId: productId, quantity: 1 }));
   };
   return (
-    <div className={`w-[40%] h-full sticky top-16 p-4`}>
+    <div className={`w-[40%] h-fit sticky top-16 p-4`}>
       <div className="h-[450px] flex border border-gray-300">
         {/* small image bar */}
         <div className="h-full w-fit overflow-y-auto border-r border-gray-300">
