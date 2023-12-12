@@ -46,8 +46,9 @@ const FetauresComponent = ({ data }: { data: object }) => {
   };
 
   return (
-    <div>
-      <div className="text-sm">
+    <div className="mt-8">
+      <p className="text-2xl font-semibold">Specifications</p>
+      <div className="text-sm mt-6">
         {Object.entries(data).map(([key, value]) =>
           renderSpecification(key, value)
         )}
