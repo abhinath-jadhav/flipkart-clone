@@ -6,7 +6,7 @@ import { addToCart } from "../../store/features/cartSlice";
 
 const ImagesComponent = ({ productId }: { productId: string }) => {
   const [heroImg, setHeroImg] = useState<string>(
-    "https://rukminim2.flixcart.com/image/832/832/xif0q/mobile/h/r/a/-original-imagrdvzn2mtjae8.jpeg?q=70"
+    "https://rukminim2.flixcart.com/image/832/832/xif0q/mobile/i/s/b/-original-imagrdefh2xgenzz.jpeg?q=70"
   );
   const imgList: string[] = [
     "https://rukminim2.flixcart.com/image/832/832/xif0q/mobile/h/r/a/-original-imagrdvzn2mtjae8.jpeg?q=70",

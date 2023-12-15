@@ -1,8 +1,14 @@
-import { bestMobile, featuredCategories, sliderImg } from "./db.util";
+import axios from "axios";
+import { bestMobile, featuredCategories } from "./db.util";
 import { FeaturedProduct } from "./types.utils";
 
-const getSlidetImgs = (): string[] => {
-  return sliderImg;
+const api = axios.create({ baseURL: "/" });
+
+const getSlidetImgs = async (): Promise<string[]> => {
+  let response = await api.get("/ms-product/api/v1/slide-bar");
+  console.log(response);
+
+  return response.data;
 };
 
 const getFeaturedCategories = (): string[] => {

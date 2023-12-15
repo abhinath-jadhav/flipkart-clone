@@ -12,6 +12,8 @@ import SelectionCard from "./Cards/SelectionCard";
 import ListComponent from "./ProductDetails/ListComponent";
 import FetauresComponent from "./ProductDetails/FetauresComponent";
 import ImagesComponent from "./ProductDetails/ImagesComponent";
+import PriceDetails from "./Cart/PriceDetails";
+import CartItems from "./Cart/CartItems";
 
 export {
   Navbar,
@@ -28,4 +30,6 @@ export {
   ListComponent,
   FetauresComponent,
   ImagesComponent,
+  PriceDetails,
+  CartItems,
 };

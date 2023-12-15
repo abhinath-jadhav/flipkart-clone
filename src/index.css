@@ -19,3 +19,7 @@
 .hidden-scroll::-moz-scrollbar-thumb {
   background-color: transparent; /* Make the scrollbar thumb transparent */
 }
+
+.box-shadow-top {
+  box-shadow: 0 -2px 10px 0 rgba(0, 0, 0, 0.1);
+}

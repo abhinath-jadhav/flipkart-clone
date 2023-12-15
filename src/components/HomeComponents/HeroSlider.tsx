@@ -31,7 +31,14 @@ const HeroSlider = () => {
   }, [next]);
 
   useEffect(() => {
-    setSlideImages(getSlidetImgs());
+    const slideImages = async () => {
+      try {
+        const imagesdata = await getSlidetImgs();
+        setSlideImages(imagesdata);
+      } catch (error) {}
+    };
+
+    slideImages();
   }, []);
   return (
     <Container>
