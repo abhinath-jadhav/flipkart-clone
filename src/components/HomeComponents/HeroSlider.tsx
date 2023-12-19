@@ -24,7 +24,7 @@ const HeroSlider = () => {
     }
   };
   useEffect(() => {
-    // Automatically advance the current slide
+    // Automatically advance the current slided
     const intervalId = setInterval(next, 2000);
     // Clear the interval on component unmount
     return () => clearInterval(intervalId);
@@ -35,7 +35,13 @@ const HeroSlider = () => {
       try {
         const imagesdata = await getSlidetImgs();
         setSlideImages(imagesdata);
-      } catch (error) {}
+      } catch (error) {
+        setSlideImages([
+          "https://rukminim1.flixcart.com/fk-p-flap/1600/270/image/42384b0a93aa1a73.jpeg?q=100",
+          "https://rukminim1.flixcart.com/fk-p-flap/1600/270/image/8cd91a791a8723ff.jpg?q=100",
+          "https://rukminim1.flixcart.com/fk-p-flap/1600/270/image/2b43a232e3d86f58.jpeg?q=100",
+        ]);
+      }
     };
 
     slideImages();
